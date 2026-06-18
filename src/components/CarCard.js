@@ -1,0 +1,16 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "./CarCard.css";
+
+const CarCard = ({ car }) => {
+  return (
+    <div className="car-card">
+      <img src={car.image} alt={car.name} />
+      <h3>{car.name}</h3>
+      <p>{car.price} / day</p>
+      <Link to={`/services/${car.id}`}>View Details</Link>
+    </div>
+  );
+};
+
+export default CarCard;
